@@ -26,7 +26,65 @@ myTuple[1] = 2 // Typescript allowws this code
 
 
 let myObj: Object
-
 myObj = []
-
 console.log(typeof myObj);
+
+myObj = bands
+myObj = {}
+
+
+const exampleObj = {
+  prop1: 'Gayathri',
+  prop2: true
+}
+
+exampleObj.prop1 = 'Yara';
+
+type Guitartist ={
+  name?: string,
+  active: boolean, //Optional
+  albums: (string | number)[]
+}
+
+let evh: Guitartist = {
+  name: 'Eddie',
+  active: false,
+  albums: [1984, 5150, '0U812']
+}
+
+let jp: Guitartist = {
+  active: true,
+  albums: ['I', 'II', 'IV']
+}
+
+const greetGuitarist = (guitarist:Guitartist)  => {
+  if(guitarist.name) {
+    return `Hello ${guitarist.name.toUpperCase()}`
+  }
+  return `Hello!`
+}
+
+
+//Used for classes
+interface Guitarist {
+  name: string,
+  active: boolean,
+  albums : (string | number)[]
+}
+
+console.log(greetGuitarist(jp))
+
+
+//Enums
+// Unlike most typescript features, Enums are not a type-level
+// addition to JavaScript but something added to the languages and runtime
+
+enum Grade {
+  U = 1,
+  D,
+  C,
+  B,
+  A
+}
+
+console.log(Grade.U)
