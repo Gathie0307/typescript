@@ -123,4 +123,4 @@ const MyBands = new Bands()
  console.log(MyBands.data)
 MyBands.data = [...MyBands.data, 'zz Top']
 console.log(MyBands.data)
-MyBands.data = ['Van Halen', 51010] // throws error 
+//MyBands.data = ['Van Halen', 51010] // throws error
